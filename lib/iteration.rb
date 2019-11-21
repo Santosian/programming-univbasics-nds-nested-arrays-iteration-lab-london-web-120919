@@ -21,9 +21,11 @@ def find_greater_pair(src)
   row_index = 0
   results = []
   while row_index < src.count do
-    subarray = src[row_index]
-    num1 = subarray[0]
-    num2 = subarray[1]
+    #subarray = src[row_index]
+    #num1 = subarray[0]
+    #num2 = subarray[1]
+    num1 = src[row_index][0]
+    num2 = src[row_index][1]
     if num1 > num2
       results << num1 
     else 
@@ -33,6 +35,16 @@ def find_greater_pair(src)
   end
   return results
 end
+
+=begin
+src = [[1,3],[2,3],[4,5]]
+row_index = 0
+src.count = 3
+# while row_index < src.count se traduce en while 0 < 3
+# es decir, while TRUE asi que eevaluamos el cuerpo
+subarray = src[0]
+# es decir subarray = [1,3]
+=end
 
 
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
@@ -54,6 +66,8 @@ def total_even_pairs(src)
   end
 results
 end
+
+src = [[1,3],[2,3],[4,5],[2,4]]
 
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # if both numbers in the pair are even, then add both those numbers to the
